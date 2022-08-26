@@ -1,9 +1,9 @@
 import useInput from '@hooks/useInput';
-import { Button, Error, Form, Header, Input, Label, LinkContainer } from '@pages/SignUp/styles';
+import { Button, Error, Form, Header, Input, Label, LinkContainer } from '@pages/LogIn/styles';
 import fetcher from '@utils/fetcher';
 import axios from 'axios';
 import React, { useCallback, useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import useSWR from 'swr';
 
 const LogIn = () => {
@@ -60,7 +60,7 @@ const LogIn = () => {
       </Form>
       <LinkContainer>
         아직 회원이 아니신가요?&nbsp;
-        <a href="/signup">회원가입 하러가기</a>
+        <Link to="/signup">회원가입 하러가기</Link>
       </LinkContainer>
     </div>
   );
